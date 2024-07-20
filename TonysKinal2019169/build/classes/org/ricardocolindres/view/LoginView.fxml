@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ricardocolindres.controller.LoginController">
+   <children>
+      <Pane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: fccc0c;">
+         <children>
+            <ImageView fitHeight="152.0" fitWidth="149.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="168.0" layoutY="197.0" text="Usuario">
+               <font>
+                  <Font name="Georgia Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="168.0" layoutY="286.0" text="Contraseña">
+               <font>
+                  <Font name="Georgia Bold" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtUsuario" layoutX="358.0" layoutY="194.0" prefHeight="35.0" prefWidth="263.0" promptText="Nombre de Usuario">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </TextField>
+            <Pane layoutX="-7.0" layoutY="406.0" prefHeight="94.0" prefWidth="707.0" style="-fx-background-color: faa453;">
+               <children>
+                  <ImageView fitHeight="82.0" fitWidth="135.0" layoutX="584.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Menu.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lblRegistrarse" layoutX="83.0" layoutY="34.0" text="No tiene un Usuario" textFill="#0494bc">
+                     <font>
+                        <Font name="Georgia Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <Hyperlink layoutX="398.0" layoutY="32.0" onAction="#ventanaUsuario" text="¡REGISTRARSE!">
+                     <font>
+                        <Font name="Georgia Bold Italic" size="20.0" />
+                     </font>
+                  </Hyperlink>
+               </children>
+            </Pane>
+            <ImageView fitHeight="73.0" fitWidth="88.0" layoutX="61.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/contrasena.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="56.0" fitWidth="92.0" layoutX="61.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/usuario.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="189.0" layoutY="52.0" text="INICIAR SESIÓN">
+               <font>
+                  <Font name="Georgia Bold" size="40.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnLogin" layoutX="289.0" layoutY="337.0" mnemonicParsing="false" onAction="#sesion" prefHeight="56.0" prefWidth="123.0" styleClass="button3" stylesheets="@../resource/TonysKinal.css" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold" size="22.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="101.0" fitWidth="99.0" layoutX="572.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/iniciar%20sesion.png" />
+               </image>
+            </ImageView>
+            <PasswordField fx:id="txtContrasena" layoutX="358.0" layoutY="283.0" prefHeight="35.0" prefWidth="263.0" promptText="Contraseña">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </PasswordField>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

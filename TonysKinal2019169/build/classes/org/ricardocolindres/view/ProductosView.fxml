@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="950.0" style="-fx-background-color: #c27941;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ricardocolindres.controller.ProductosController">
+   <children>
+      <AnchorPane layoutX="-7.0" prefHeight="540.0" prefWidth="205.0" style="-fx-background-color: #fa9d3a;">
+         <children>
+            <Pane layoutX="4.0" layoutY="-63.0" prefHeight="255.0" prefWidth="203.0" style="-fx-background-color: #fbba25; -fx-background-radius: 75;">
+               <children>
+                  <Label alignment="CENTER" layoutX="-20.0" layoutY="56.0" prefHeight="88.0" prefWidth="243.0" text="Productos" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Georgia Bold" size="30.0" />
+                     </font></Label>
+                  <ImageView fitHeight="143.0" fitWidth="144.0" layoutX="30.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/productos.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Button fx:id="btnNuevo" layoutX="8.0" layoutY="198.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="27.0" prefWidth="203.0" style="-fx-background-radius: 50 0 50 0;" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="Nuevo">
+               <graphic>
+                  <ImageView fx:id="imgNuevo" fitHeight="53.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/nuevo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Georgia Bold" size="21.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEliminar" layoutX="1.0" layoutY="262.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="27.0" prefWidth="209.0" style="-fx-background-radius: 50 0 50 0;" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="Eliminar">
+               <font>
+                  <Font name="Georgia Bold" size="21.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgEliminar" fitHeight="41.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/eliminar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnEditar" layoutX="8.0" layoutY="326.0" mnemonicParsing="false" onAction="#editar" prefHeight="27.0" prefWidth="204.0" style="-fx-background-radius: 50 0 50 0;" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="Editar">
+               <font>
+                  <Font name="Georgia Bold" size="21.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgEditar" fitHeight="58.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/editar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnReporte" layoutX="2.0" layoutY="392.0" mnemonicParsing="false" onAction="#reporte" prefHeight="27.0" prefWidth="206.0" style="-fx-background-radius: 50 0 50 0;" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="Reporte">
+               <font>
+                  <Font name="Georgia Bold" size="21.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgReporte" fitHeight="42.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/reporte.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="74.0" fitWidth="97.0" layoutX="64.0" layoutY="459.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/atras.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="190.0" layoutY="499.0" opacity="0.34" prefHeight="255.0" prefWidth="407.0" style="-fx-background-color: #f4e80c; -fx-background-radius: 100;" />
+      <GridPane layoutX="221.0" layoutY="29.0" prefHeight="109.0" prefWidth="708.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="30.39999694824219" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="36.000003051757815" minHeight="10.0" prefHeight="36.000003051757815" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="36.000003051757815" minHeight="10.0" prefHeight="36.000003051757815" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Código Producto">
+               <font>
+                  <Font name="Georgia Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label text="Nombre Producto" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Georgia Bold" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="txtNombreProducto" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtCodigoProducto" editable="false" GridPane.columnIndex="1" />
+            <Label text="Cantidad" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Georgia Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCantidad" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <Separator layoutX="218.0" layoutY="178.0" prefHeight="0.0" prefWidth="714.0" />
+      <TableView fx:id="tblProductos" layoutX="218.0" layoutY="204.0" onMouseClicked="#seleccionarElemento" prefHeight="321.0" prefWidth="714.0" styleClass="root" stylesheets="@../resource/TonysKinal.css">
+         <columns>
+            <TableColumn fx:id="colCodigoProducto" prefWidth="134.4000244140625" text="Cod. Producto" />
+            <TableColumn fx:id="colNombreProducto" minWidth="0.0" prefWidth="415.9999084472656" text="Descripción" />
+            <TableColumn fx:id="colCantidad" minWidth="0.0" prefWidth="164.0" text="Cantidad" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

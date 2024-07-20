@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="414.0" prefWidth="566.0" style="-fx-background-color: #fa9d3a;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ricardocolindres.controller.ProgramadorController">
+   <children>
+      <Label layoutX="278.0" layoutY="111.0" text="Nombres:" textFill="#f32a26">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label prefHeight="17.0" prefWidth="566.0" style="-fx-background-color: #f4e80c;" />
+      <ImageView fitHeight="317.0" fitWidth="225.0" layoutX="25.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/borde.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="235.0" fitWidth="184.0" layoutX="50.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="21.0" layoutY="39.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="523.0" style="-fx-background-color: #09a3a2;" />
+      <Label layoutX="178.0" layoutY="35.0" text="PROGRAMADOR" textFill="#412913">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="411.0" layoutY="112.0" text="Ricardo Adrián" textFill="#283963">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="277.0" layoutY="147.0" text="Apellidos:" textFill="#f32a26">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="403.0" layoutY="148.0" text="Colindres Franco" textAlignment="CENTER" textFill="#283963">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="293.0" layoutY="189.0" text="Carné:" textAlignment="CENTER" textFill="#f32a26">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="439.0" layoutY="190.0" text="2019169" textFill="#283963">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="254.0" layoutY="225.0" text="Código Técnico:" textAlignment="CENTER" textFill="#f32a26">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="446.0" layoutY="225.0" text="IN5AM" textFill="#283963">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutY="397.0" prefHeight="17.0" prefWidth="566.0" style="-fx-background-color: #f4e80c;" />
+      <ImageView fitHeight="194.0" fitWidth="195.0" layoutX="303.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Programador.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="43.0" fitWidth="61.0" layoutX="23.0" layoutY="35.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/atras.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="223.0" fitWidth="176.0" layoutX="60.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Foto.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

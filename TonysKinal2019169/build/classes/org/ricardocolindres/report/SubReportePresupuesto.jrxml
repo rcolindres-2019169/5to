@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubReportePresupuesto" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="dc461e42-25af-40e6-b8cf-63f45a8c99a3">
+	<property name="ireport.zoom" value="3.797498335832417"/>
+	<property name="ireport.x" value="218"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codEmpresa" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from Empresas E INNER JOIN Presupuestos P on
+   E.codigoEmpresa = P.codigoEmpresa where E.codigoEmpresa = $P{codEmpresa} group by P.cantidadPresupuesto;]]>
+	</queryString>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoPresupuesto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaSolicitud" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidadPresupuesto" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<columnHeader>
+		<band height="22">
+			<rectangle>
+				<reportElement x="13" y="0" width="527" height="20" forecolor="#FFCC00" backcolor="#FFCC33" uuid="8246e42b-d388-43a6-b625-bbaf659fe80b"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="60" y="1" width="123" height="20" uuid="37b1a9f2-17e6-4c94-a3d3-cdd979b4bb0a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Georgia" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de Solicitud]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="348" y="0" width="142" height="20" uuid="08e7429d-d23a-45c5-b011-311605dd2dfd"/>
+				<textElement textAlignment="Center">
+					<font fontName="Georgia" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad por el Servicio]]></text>
+			</staticText>
+			<line>
+				<reportElement x="13" y="21" width="527" height="1" forecolor="#FF9966" uuid="6d482ff1-9c3e-4e80-a388-973d0cf5a891"/>
+			</line>
+			<line>
+				<reportElement x="275" y="0" width="1" height="20" forecolor="#FF3333" uuid="b3aefb8a-f110-47de-983c-f98824546767"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="39" splitType="Stretch">
+			<textField>
+				<reportElement x="71" y="12" width="100" height="20" uuid="bae7e3de-b16c-41e1-bb02-5a28b6fff47a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Georgia"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaSolicitud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="348" y="12" width="142" height="20" uuid="056ce97d-740f-4941-9d47-117c48a7731b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Georgia"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cantidadPresupuesto}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="13" y="31" width="527" height="1" forecolor="#FF3300" uuid="e3d7e99d-ad06-4fa6-b1d0-9a2b0ceaf52f"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="274" y="0" width="1" height="31" forecolor="#FF3333" uuid="8ba8a087-804b-4989-b1a8-0b86f0716ead"/>
+			</line>
+		</band>
+	</detail>
+</jasperReport>
